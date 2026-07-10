@@ -5,6 +5,8 @@ CHANGELOG
 ------
 
 **ENHANCEMENTS**
+- Add support for AlmaLinux 8 as a `CustomAmi` created through the `build-image` process. ParallelCluster does not
+  publish an official AlmaLinux 8 AMI.
 - Add support for p6-b300 instances for all OSs except AL2.
 - Replace cfn-hup in compute nodes with systemd timer to support in place updates in order to improve performance for tightly coupled worloads at scale.
   This new mechanism relies on shared storage to sync updates between the head node and compute nodes.

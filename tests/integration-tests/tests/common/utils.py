@@ -33,6 +33,7 @@ LOGGER = logging.getLogger(__name__)
 SYSTEM_ANALYZER_SCRIPT = pathlib.Path(__file__).parent / "data/system-analyzer.sh"
 
 RHEL_OWNERS = ["309956199498", "841258680906", "219670896067"]
+ALMALINUX_OWNERS = ["764336703387"]
 
 OS_TO_OFFICIAL_AMI_NAME_OWNER_MAP = {
     "alinux2": {"name": "amzn2-ami-kernel-5.10-hvm-*.*.*.*-*-gp2", "owners": ["amazon"]},
@@ -55,6 +56,10 @@ OS_TO_OFFICIAL_AMI_NAME_OWNER_MAP = {
     "rocky8.9": {"name": "Rocky-8-EC2-Base-8.9*", "owners": ["792107900819"]},  # TODO add china and govcloud accounts
     "rhel9": {"name": "RHEL-9.*_HVM*", "owners": RHEL_OWNERS},
     "rocky9": {"name": "Rocky-9-EC2-Base-9.*", "owners": ["792107900819"]},  # TODO add china and govcloud accounts
+    "almalinux8": {
+        "name": {"x86_64": "AlmaLinux OS 8*x86_64", "arm64": "AlmaLinux OS 8*aarch64"},
+        "owners": ALMALINUX_OWNERS,
+    },
 }
 
 # Remarkable AMIs are latest deep learning base AMI and FPGA developer AMI without pcluster infrastructure
@@ -109,6 +114,7 @@ OS_TO_PCLUSTER_AMI_NAME_OWNER_MAP = {
     "rocky8": {"name": "rocky8-hvm-*-*", "owners": PCLUSTER_AMI_OWNERS},
     "rhel9": {"name": "rhel9-hvm-*-*", "owners": PCLUSTER_AMI_OWNERS},
     "rocky9": {"name": "rocky9-hvm-*-*", "owners": PCLUSTER_AMI_OWNERS},
+    "almalinux8": {"name": "almalinux8-hvm-*-*", "owners": PCLUSTER_AMI_OWNERS},
 }
 
 FIRST_STAGE_AMI_OWNERS = ["self", "447714826191"]

@@ -38,6 +38,7 @@ Allowed values for Operating System:
 6. rocky8
 7. rhel9
 8. rocky9
+9. almalinux8
 Allowed values for VPC ID:
   #  id            name                                 number_of_subnets
 ---  ------------  ---------------------------------  -------------------

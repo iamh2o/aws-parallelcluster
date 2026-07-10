@@ -38,6 +38,7 @@ Allowed values for Operating System:
 6. rocky8
 7. rhel9
 8. rocky9
+9. almalinux8
 Allowed values for Availability Zone:
 1. eu-west-1a
 2. eu-west-1b

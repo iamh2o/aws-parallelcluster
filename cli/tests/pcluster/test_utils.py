@@ -88,11 +88,31 @@ def test_generate_random_prefix():
     [
         (
             "x86_64",
-            ["alinux2", "alinux2023", "ubuntu2204", "ubuntu2404", "rhel8", "rocky8", "rhel9", "rocky9"],
+            [
+                "alinux2",
+                "alinux2023",
+                "ubuntu2204",
+                "ubuntu2404",
+                "rhel8",
+                "rocky8",
+                "rhel9",
+                "rocky9",
+                "almalinux8",
+            ],
         ),
         (
             "arm64",
-            ["alinux2", "alinux2023", "ubuntu2204", "ubuntu2404", "rhel8", "rocky8", "rhel9", "rocky9"],
+            [
+                "alinux2",
+                "alinux2023",
+                "ubuntu2204",
+                "ubuntu2404",
+                "rhel8",
+                "rocky8",
+                "rhel9",
+                "rocky9",
+                "almalinux8",
+            ],
         ),
     ],
 )
@@ -108,7 +128,17 @@ def test_get_supported_os_for_architecture(architecture, supported_oses):
     [
         (
             "slurm",
-            ["alinux2", "alinux2023", "ubuntu2204", "ubuntu2404", "rhel8", "rocky8", "rhel9", "rocky9"],
+            [
+                "alinux2",
+                "alinux2023",
+                "ubuntu2204",
+                "ubuntu2404",
+                "rhel8",
+                "rocky8",
+                "rhel9",
+                "rocky9",
+                "almalinux8",
+            ],
         ),
         ("awsbatch", ["alinux2", "alinux2023"]),
     ],
